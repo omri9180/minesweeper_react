@@ -1,9 +1,8 @@
+import React from 'react';
+import './Styles/Cell.css';
+
 const Cell = () => {
-    return (
-        <div className="cell">
-            <h1>Cell</h1>
-        </div>
-    );
+    return <td className="cell">0</td>;
 };
 
 export default Cell;
