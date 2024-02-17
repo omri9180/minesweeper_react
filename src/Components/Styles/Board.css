@@ -1,6 +1,6 @@
 .board {
     display: flex;
-    width: 300px;
+    width: 500px;
     height: 500px;
     border: 5px solid gray;
     background-color: rgb(224, 230, 228);
@@ -45,8 +45,7 @@
 }
 
 .cells_board {
-    width: 90%;
-    height: 98%;
+    height: 400px;
     margin: 10px;
     border: 5px solid gray;
     background-color: rgb(190, 190, 190);

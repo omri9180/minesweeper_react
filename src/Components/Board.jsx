@@ -6,7 +6,7 @@ import Rows from './Rows';
 const Board = () => {
     const [timeCount, setTimeCount] = useState([0, 0, 0]);
     const [startClock, setStartClock] = useState(false);
-    const num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     const startGame = () => {
         setStartClock(true);
     };
@@ -23,8 +23,8 @@ const Board = () => {
             <div className="cells_board">
                 <table>
                     <tbody>
-                        {num.map(i => (
-                            <Rows key={i} cellForRow={num} />
+                        {num.map((row, index) => (
+                            <Rows key={index} RowsNum={num} startGame={startGame} />
                         ))}
                     </tbody>
                 </table>
