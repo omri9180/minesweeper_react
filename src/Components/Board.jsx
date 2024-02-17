@@ -1,16 +1,23 @@
 import Clock from './Clock';
 import './Styles/Board.css';
 import { useState } from 'react';
-import Rows from './Rows';
+import Cell from './Cell';
 
 const Board = () => {
+    const numRows = 10;
+    const numCols = 10;
+    const numMines = 10;
     const [timeCount, setTimeCount] = useState([0, 0, 0]);
     const [startClock, setStartClock] = useState(false);
-    const num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     const startGame = () => {
         setStartClock(true);
     };
-
+    const cellStyle = {
+        display: 'grid',
+        gap: '0.2px',
+        gridTemplateColumns: `repeat(${numCols}, 30px)`,
+        gridTemplateRows: `repeat(${numRows}, 30px)`,
+    };
     return (
         <div className="board">
             <div className="info_screen">
@@ -20,17 +27,20 @@ const Board = () => {
                     <Clock setTimeCount={setTimeCount} timeCount={timeCount} startClock={startClock} />
                 </div>
             </div>
-            <div className="cells_board">
-                <table>
-                    <tbody>
-                        {num.map((row, index) => (
-                            <Rows key={index} RowsNum={num} startGame={startGame} />
-                        ))}
-                    </tbody>
-                </table>
+            <div style={cellStyle} className="cells_board">
+                <Cell numRows={numRows} numCols={numCols} numMines={numMines} startGame={startGame} />
             </div>
         </div>
     );
 };
 
 export default Board;
+{
+    /* <table>
+<tbody>
+    {num.map((row, index) => (
+        <Rows key={index} RowsNum={num} startGame={startGame} />
+    ))}
+</tbody>
+</table> */
+}

@@ -1,7 +1,7 @@
 .board {
     display: flex;
-    width: 500px;
-    height: 500px;
+    width: fit-content;
+    height: fit-content;
     border: 5px solid gray;
     background-color: rgb(224, 230, 228);
     flex-direction: column;
@@ -45,7 +45,8 @@
 }
 
 .cells_board {
-    height: 400px;
+    width: fit-content;
+    height: fit-content;
     margin: 10px;
     border: 5px solid gray;
     background-color: rgb(190, 190, 190);

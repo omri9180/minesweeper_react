@@ -1,16 +1,16 @@
 .cell {
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ccc;
-    background-color: #eee;
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    font-weight: bold;
+    cursor: pointer;
 }
 
 .cell:hover {
-    background-color: #ddd;
+    background-color: #bbb;
 }
 
 /* .cell.mine {
