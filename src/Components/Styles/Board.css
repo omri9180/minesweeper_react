@@ -27,6 +27,7 @@
     background-color: rgb(190, 190, 190);
     margin: 5px;
     width: 60px;
+    direction: rtl;
 }
 
 .reset_btn {

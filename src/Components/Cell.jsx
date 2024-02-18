@@ -31,7 +31,7 @@ const Cell = ({ numRows, numCols, numMines, startGame }) => {
                 <div key={rowIndex} className="row">
                     {row.map((cell, colIndex) => (
                         <div key={colIndex} className="cell" onClick={startGame}>
-                            {cell.isMine ? '💣' : ''}
+                            {cell.isMine ? '☢️' : ''}
                         </div>
                     ))}
                 </div>
