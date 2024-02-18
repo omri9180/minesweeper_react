@@ -4,9 +4,9 @@ import { useState } from 'react';
 import Cell from './Cell';
 
 const Board = () => {
-    const numRows = 20;
-    const numCols = 20;
-    const numMines = numRows * numCols * 0.1;
+    const numRows = 10;
+    const numCols = 10;
+    const numMines = parseInt(numRows * numCols * 0.1);
     const [timeCount, setTimeCount] = useState([0, 0, 0]);
     const [startClock, setStartClock] = useState(false);
     const [minCounter, setMineCounter] = useState(numMines);
